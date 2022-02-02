@@ -1,0 +1,407 @@
+@import url(style.css);
+
+/* Dark Light theme */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html[light-mode="light"] {
+    --bg1-color: white;
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    --border: 1px solid #ecf0f3;
+    --meta-col: #444;
+    --head-col: black;
+    --tint-col: #ecf0f3;
+}
+
+html[light-mode="dark"] {
+    --bg1-color: #272727;
+    --shadow: 0 4px 8px 0 rgba(104, 102, 102, 0.2);
+    --border: none;
+    --meta-col: rgb(155, 149, 149);
+    --head-col: #fff;
+    --tint-col: #ecf0f3be;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.bildung_kopf {
+    font-weight: bold;
+}
+
+/*Farbe für Bildung-Header*/
+
+.bildung_hintergrund {
+    color: #4e00bb;
+}
+
+/* -----Bildung CSS----- */
+
+@media (max-width: 767px) {
+    .dropdown1 {
+        position: absolute;
+        text-align: center;
+        padding-right: 1.2rem;
+        z-index: 3;
+        padding-left: 3.5%;
+    }
+    .dropdown2 {
+        position: absolute;
+        text-align: center;
+        padding-top: 10rem;
+        padding-left: 3.5%;
+        z-index: 3;
+    }
+    .godown {
+        position: absolute;
+        z-index: 1;
+        padding-top: 8rem;
+    }
+}
+
+.sect {
+    height: auto;
+    max-width: 120%;
+    background-size: cover;
+    background-position: center center;
+    object-fit: fill;
+}
+
+.s2 {
+    overflow-x: hidden;
+}
+
+.s2 .head {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Optimierung */
+
+@-webkit-keyframes shake-bottom {
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+    }
+    10% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-4deg);
+        transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg);
+    }
+    80% {
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+    90% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes shake-bottom {
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+    }
+    10% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-4deg);
+        transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg);
+    }
+    80% {
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+    90% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+}
+
+/* -----Bildung-Zeitstrahl CSS----- */
+
+section {
+    padding: 100px 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 400;
+    background-color: #eee;
+}
+
+h1 {
+    font-size: 200%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+header {
+    background: #3F51B5;
+    color: #FFFFFF;
+    padding: 150px 0;
+}
+header p {
+    font-family: "Allura";
+    color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 0;
+    font-size: 60px;
+    margin-top: -30px;
+}
+
+.zeitstrahl {
+    position: relative;
+    font-weight: bold;
+}
+
+/* Linie */
+.zeitstrahl::before {
+    content: "";
+    background: #C5CAE9;
+    width: 5px;
+    height: 95%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.zeitstrahl-objekt {
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.zeitstrahl-objekt:nth-child(even) .zeitstrahl-daten {
+    float: right;
+    padding: 40px 30px 10px 30px;
+}
+.zeitstrahl-objekt:nth-child(even) .zeitstrahl-daten .alignment {
+    position:absolute;
+    text-align: left;
+    padding-right: 5px;
+}
+.zeitstrahl-objekt:nth-child(even) .zeitstrahl-daten .datum {
+    left: auto;
+    right: 0;
+}
+.zeitstrahl-objekt:nth-child(even) .zeitstrahl-daten .bnt-more {
+    position: absolute;
+    right:0;
+    bottom: 65px;
+}
+
+.zeitstrahl-objekt:nth-child(even) .zeitstrahl-daten::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    left: -15px;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #f5f5f5 transparent transparent;
+}
+
+.zeitstrahl-objekt::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.zeitstrahl-daten {
+    position: relative;
+    width: 45%;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background: #f5f5f5;
+    color: black;
+    box-shadow: 0 20px 25px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.zeitstrahl-daten::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    right: -15px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #f5f5f5;
+}
+
+.zeitstrahl-bild {
+    width: 30px;
+    height: 30px;
+    background: #3F51B5;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -15px;
+}
+
+.bnt-more {
+    background: #3F51B5;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    right:0;
+}
+
+.bnt-mor:hover, .bnt-mor:active, .bnt-mor:focus {
+    background: #32408f;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.zeitstrahl-karte {
+    padding: 0 !important;
+}
+
+.zeitstrahl-karte p {
+    padding: 0 20px;
+}
+
+.zeitstrahl-karte a {
+    margin-left: 20px;
+}
+
+.zeitstrahl-objekt .zeitstrahl-bild-kopf {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    background-size: cover;
+}
+
+.zeitstrahl-bild-kopf {
+    height: 200px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.zeitstrahl-bild-kopf h2 {
+    /*color: #FFFFFF;*/
+    color: black;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+
+blockquote {
+    margin-top: 30px;
+    color: #757575;
+    border-left-color: #3F51B5;
+    padding: 0 20px;
+}
+
+.datum {
+    background: #FF4081;
+    display: inline-block;
+    color: #FFFFFF;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.alignment{
+    padding-left: 20px;
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .zeitstrahl::before {
+        left: 50px;
+    }
+
+    .zeitstrahl .zeitstrahl-bild {
+        left: 50px;
+    }
+
+    .zeitstrahl .zeitstrahl-daten {
+        max-width: 100%;
+        width: auto;
+        margin-left: 70px;
+    }
+
+    .zeitstrahl .zeitstrahl-objekt:nth-child(even) .zeitstrahl-daten {
+        float: none;
+    }
+    h2{
+        font-size: 1.75rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+
+    .zeitstrahl .zeitstrahl-objekt:nth-child(odd) .zeitstrahl-daten::after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        width: 0;
+        height: 0;
+        top: 30px;
+        left: -15px;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #f5f5f5 transparent transparent;
+    }
+}
+@media screen and (max-width: 760px) {
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: .85rem;
+        font-weight: bold;
+    }
+}
